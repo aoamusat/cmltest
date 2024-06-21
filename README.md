@@ -27,7 +27,8 @@ npm install --save-dev @types/node
 First, import the `CMLLogger` class and `LogOptions` type in your TypeScript file:
 
 ```typescript
-import CMLLogger, { LogOptions } from './Logger';
+import CMLLogger from './src/logger';
+import { LogOptions } from './src/utils/logOptions';
 ```
 
 ### Configuring the Logger
@@ -75,6 +76,7 @@ customFileLogger.debug('This is a debug message logged to a custom file.');
 - `debug(message: string): void`: Logs a debug message.
 - `error(message: string): void`: Logs an error message.
 - `info(message: string): void`: Logs an informational message.
+- `verbose(message: string): void`: Logs a verbose message.
 - `warning(message: string): void`: Logs a warning message.
 
 ### LogOptions Type
@@ -92,7 +94,3 @@ export type LogOptions =
 - **File Rotation**: Implement file rotation to handle large log files.
 - **Multiple Destinations**: Support logging to multiple destinations simultaneously.
 - **Asynchronous Logging**: Implement asynchronous logging for improved performance.
-
-## Contributing
-
-If you find a bug or have a feature request, please open an issue or submit a pull request. Contributions are welcome!
